@@ -95,6 +95,12 @@
 
 	// Main Sections: Two.
 
+		// Hover gif
+	$("img", "#gifs-rows").hover(function () {
+		$('.preset-file').toggle();
+		$('.gif-file').toggle();
+	}
+
 		// Lightbox gallery.
 			$window.on('load', function() {
 
