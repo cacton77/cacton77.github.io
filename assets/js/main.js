@@ -96,13 +96,9 @@
 	// Main Sections: Two.
 
 		// Hover gif
-	$("img", "#gifs-rows").hover(function () {
-		$('.preset-file').toggle();
-		$('.gif-file').toggle();
-	}
 
 		// Lightbox gallery.
-			$window.on('load', function() {
+/*			$window.on('load', function() {
 
 				$('#two').poptrox({
 					caption: function($a) { return $a.next('h3').text(); },
@@ -118,6 +114,6 @@
 					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
 				});
 
-			});
+			});*/
 
 })(jQuery);
