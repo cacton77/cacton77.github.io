@@ -94,9 +94,7 @@
 			}
 
 	// Main Sections: Two.
-
-		// Hover gif
-
+			
 		// Lightbox gallery.
 /*			$window.on('load', function() {
 
@@ -117,3 +115,14 @@
 			});*/
 
 })(jQuery);
+
+
+function playGif(id) {
+	img = document.getElementById(id);
+	img.src = img.src.replace(".png", ".gif");
+}
+
+function stopGif(id) {
+	img = document.getElementById(id);
+	img.src = img.src.replace(".gif", ".png");
+}

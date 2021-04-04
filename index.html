@@ -51,8 +51,10 @@
 					<section id="two">
 						<h2>Recent Work</h2>
 						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://wendy-vincent.github.io/CS184-FinalProject-sp20/" target="_blank" class="image fit thumb"><div id="gifs-rows"><img src="images/thumbs/liquid_synth.gif" alt="gif preset" class="preset-file" /></div></a>
+							<article id="gif-article" class="col-6 col-12-xsmall work-item">
+								<div onmouseover="playGif('liquid_synth')" onmouseout="stopGif('liquid_synth')">
+									<a href="https://wendy-vincent.github.io/CS184-FinalProject-sp20/" target="_blank" class="image fit thumb"><img id="liquid_synth" src="images/thumbs/liquid_synth.png" alt="" /></a>
+								</div>
 								<h3>Liquid Synthesizer</h3>
 								<p>Physics-based, digital instrument.</p>
 							</article>
@@ -62,7 +64,9 @@
 								<p>Capstone mechatronics design project.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/cacton77/Modeling-and-Optimization-of-UAV-Swarms" target="_blank" class="image fit thumb"><div id="gifs-rows"><img src="images/thumbs/cropped_swarm.gif" alt="gif preset" class="preset-file" /></div></a>
+								<div onmouseover="playGif('UAVswarm')" onmouseout="stopGif('UAVswarm')">
+								<a href="https://github.com/cacton77/Modeling-and-Optimization-of-UAV-Swarms" target="_blank" class="image fit thumb"><img id ="UAVswarm" src="images/thumbs/UAVswarm.png" alt="" /></a>
+								</div>
 								<h3>Simulation and Optimization of UAV Swarms</h3>
 								<p>Forward Euler time discretization and genetic algorithm.</p>
 							</article>
@@ -72,7 +76,9 @@
 								<p>Design of microprocessor controlled systems project.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://drive.google.com/file/d/1xUca8Pr-QZImdt6e3P29BkiqrUQKMQFs/view?usp=sharing" target="_blank" class="image fit thumb"><img src="images/thumbs/usb1.gif" alt="" /></a>
+								<div onmouseover="playGif('usb1')" onmouseout="stopGif('usb1')">
+									<a href="https://drive.google.com/file/d/1xUca8Pr-QZImdt6e3P29BkiqrUQKMQFs/view?usp=sharing" target="_blank" class="image fit thumb"><img id="usb1" src="images/thumbs/usb1.png" alt="" /></a>
+								</div>
 								<h3>3D Model and Animation of Turntable</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
@@ -92,18 +98,7 @@
 						<h2>Get In Touch</h2>
 						<p>If you are interested in working with me, please feel free to reach out.</p>
 						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
+							
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<!--<li>
@@ -451,6 +446,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/colin-acton/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://github.com/cacton77" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.youtube.com/channel/UCjnCEh1bIkSMVgc2itujoTw" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
 						<li><a href="https://www.twitter.com" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="https://www.goodreads.com/user/show/92379165-colin" target="_blank" class="icon brands fa-goodreads"><span class="label">goodreads</span></a></li>
 						<li><a href="mailto: colinacton@berkeley.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
