@@ -126,3 +126,19 @@ function stopGif(id) {
 	img = document.getElementById(id);
 	img.src = img.src.replace(".gif", ".png");
 }
+
+function switchArticle(button) {
+	switch (button) {
+		case "button1":
+			text = "Banana is good!";
+			break;
+		case "button2":
+			text = "I am not a fan of orange.";
+			break;
+		case "button3":
+			text = "How you like them apples?";
+			break;
+		default:
+			text = "I have never heard of that fruit...";
+	} 
+}
