@@ -130,7 +130,7 @@ function stopGif(id) {
 function switchArticle(button) {
 	switch (button) {
 		case "button1":
-			text = "Banana is good!";
+
 			break;
 		case "button2":
 			text = "I am not a fan of orange.";
