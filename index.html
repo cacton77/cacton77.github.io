@@ -24,15 +24,15 @@
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 					<h1>
 						<strong>Call me Colin</strong>. <br />
-						Mechanical Engineer in Training<br />
+						BS ME + Minor EECS<br />
 					</h1>
 					<br />
 					<h4>
-						<a href="#Mech">All Projects |</a> <br />
+						<a href="#Mech">Mechatronics Design |</a> <br />
 						<br />
-						<a href="#Sim">Mechatronics Design |</a> <br />
+						<a href="#Sim">Modeling and Simulation |</a> <br />
 						<br />
-						<a href="#OtherProjects">Simulation and Optimization |</a> <br />
+						<a href="#OtherProjects">Other Projects |</a> <br />
 					</h4>
 				</div>
 			</header>
@@ -57,9 +57,12 @@
 						<div id="Mech"><h2>Mechatronics Design</h2></div>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/cacton77/Autonomous-Sailboat" target="_blank" class="image fit thumb"><img src="images/thumbs/wvdrw-ass.png" alt="" /></a>
-								<h3>Autonomous Wing-Sail Boat</h3>
-								<p>Capstone mechatronics design project.</p>
+								<div onmouseover="playGif('wingsail')" onmouseout="stopGif('wingsail')">
+									<a href="https://github.com/cacton77/Autonomous-Sailboat" target="_blank" class="image fit thumb"><img id ="wingsail" src="images/thumbs/wingsail.png" alt="" /></a>
+									<link rel="prefetch" href="images/thumb/wingsail.gif"
+								</div>
+									<h3>Autonomous Wing-Sail Boat</h3>
+									<p>Capstone mechatronics design project.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
@@ -72,7 +75,7 @@
 									<link rel="prefetch" href="images/thumb/usb1.gif" />
 								</div>
 								<h3>3D Model and Animation of Turntable</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<p>140+ parts of music hall usb-1 turntable modeled in Creo and animated in 3ds Max.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
@@ -81,7 +84,7 @@
 							</article>
 						</div>
 
-						<div id="Sim"><h2>Simulation and Optimization</h2></div>
+						<div id="Sim"><h2>Modeling and Simulation</h2></div>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<div onmouseover="playGif('UAVswarm')" onmouseout="stopGif('UAVswarm')">
@@ -89,7 +92,7 @@
 									<link rel="prefetch" href="images/thumb/UAVswarm.gif" />
 								</div>
 								<h3>Simulation and Optimization of UAV Swarms</h3>
-								<p>Forward Euler time discretization and genetic algorithm.</p>
+								<p>Simulation of the motion of a swarm of drones and their interaction with obstacles and targets. Genetic algorithm optimizes design parameters.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<div onmouseover="playGif('printersim')" onmouseout="stopGif('printersim')">
@@ -99,10 +102,13 @@
 								<h3>Modeling and Simulation of Robotic 3D Printer</h3>
 								<p>Forward Euler time discretization and genetic algorithm.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							<article id="gif-article" class="col-6 col-12-xsmall work-item">
+								<div onmouseover="playGif('liquid_synth')" onmouseout="stopGif('liquid_synth')">
+									<a href="https://wendy-vincent.github.io/CS184-FinalProject-sp20/" target="_blank" class="image fit thumb"><img id="liquid_synth" src="images/thumbs/liquid_synth.png" alt="" /></a>
+									<link rel="prefetch" href="images/thumb/liquid_synth.gif" />
+								</div>
+								<h3>Liquid Synthesizer</h3>
+								<p>Physics-based, digital instrument.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
@@ -112,14 +118,7 @@
 						</div>
 						<div id="OtherProjects"><h2>Other Projects</h2></div>
 						<div class="row">
-							<article id="gif-article" class="col-6 col-12-xsmall work-item">
-							<div onmouseover="playGif('liquid_synth')" onmouseout="stopGif('liquid_synth')">
-								<a href="https://wendy-vincent.github.io/CS184-FinalProject-sp20/" target="_blank" class="image fit thumb"><img id="liquid_synth" src="images/thumbs/liquid_synth.png" alt="" /></a>
-								<link rel="prefetch" href="images/thumb/liquid_synth.gif" />
-							</div>
-							<h3>Liquid Synthesizer</h3>
-							<p>Physics-based, digital instrument.</p>
-							</article>
+							
 						</div>
 						<ul class="actions">
 							<li><a href="#" class="button">Full Portfolio</a></li>
