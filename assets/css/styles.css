@@ -1,0 +1,434 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 120;
+  /* --hue-color: 251; */
+
+  /* --hue-color: 240; */
+  /* --gue-color: 142; */
+  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --header-color: hsl(var(--hue-color), 18%, 84%);
+  --home-color: hsla(99, 03%, 1%, 0.7);
+  --footer-color: hsla(0, 0%, 0%, 50%);
+  --title-color: hsl(var(--hue-color), 69%, 61%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --background-image: url(../../assets/img/DSC01551.jpg);
+  /*========== Font and typography ==========*/
+  --body-font: 'MesloLGS NF', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+  /* --hue-color: 251; */
+  --first-color: hsl(307, 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --header-color: hsl(251, 18%, 84%);
+  --home-color: hsla(251, 10%, 1%, .6);
+  --footer-color: hsla(0, 0%, 0%, 50%);
+  --title-color: hsl(307, 100%, 35%);
+  --text-color: hsl(307, 28%, 75%);
+  --text-color-light: hsl(251, 8%, 5%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color: hsl(0, 0%, 12%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --background-image: url(../../assets/img/DSC01529.jpg);
+  --background-image: url(../../assets/img/DSC01361.jpg);
+}
+
+/*========== Button Dark/Light ==========*/
+.nav__btns {
+  display: flex;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+  color: var(--text-color-light)
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /* color: var(--title-color); */
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+p {
+  color: var(--text-color)
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 3.5rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.acrylic {
+  /* position: relative; */
+  background: rgba(0, 0, 0, 0.6);
+  /* -webkit-backdrop-filter: blur(1px); */
+  /* backdrop-filter: blur(1px); */
+  /* margin: 7px; */
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  /* max-width: 868px; */
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--header-color);
+}
+
+.header__container {
+  width: 100%;
+  vertical-align: middle;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.header__img {
+  width: 18px;
+  margin: auto;
+  /* padding-top: 4px; */
+  /* padding-top: 4px; */
+}
+
+/*==================== NAV ====================*/
+
+ul.nav {
+  padding-left: 0px;
+  background-color: var(--header-color);
+  text-align: center;
+  /* max-width: 1000px;
+  width: 90%;
+  margin: 0 auto; */
+}
+
+ul.nav>li {
+  display: inline-block;
+  /* padding: 10px 10px; */
+  /* width: 11%; */
+  text-align: center;
+}
+
+ul.nav>li:hover {
+  background-color: hsl(251, 57%, 63%);
+  background-color: var(--first-color);
+}
+
+ul.nav>li>a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/* show menu */
+
+
+/* Active link */
+
+
+/* Change background header */
+
+
+/*==================== HOME ====================*/
+.home {
+  /* max-width: 1200px; */
+  width: 100%;
+}
+
+.home__container {
+  gap: 2rem;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  /* display: flex; */
+  /* align-items: center; */
+  /* vertical-align: middle; */
+  /* justify-content: center; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* border: auto; */
+  /* padding: auto; */
+  /* margin: auto; */
+  background-color: var(--home-color);
+}
+
+.home__content__A {
+  /* grid-template-columns: 4fr 2fr; */
+  /* padding-top: 1rem; */
+  grid-template-columns: 5fr 3fr;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  align-items: left;
+}
+
+.home__content__B {
+  grid-template-columns: 3fr 5fr;
+  /* padding-top: 1rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: left;
+}
+
+.home__button__grid {
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto 0;
+}
+
+.home__button {
+  margin: auto;
+  font-size: 1rem;
+}
+
+.home__text {
+  /* margin: auto; */
+  /* padding-top: 1rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.home__img {
+  margin: auto;
+
+  /* margin: 0 auto; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* width: 250px; */
+  font-style: italic;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* padding-top: 1rem; */
+  /* padding-left: 1rem; */
+  /* padding-right: 1rem; */
+}
+
+.home__img__caption {}
+
+.home__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+/*==================== BUTTONS ====================*/
+
+
+/*==================== ABOUT ====================*/
+
+
+/*==================== SKILLS ====================*/
+
+
+/*==================== QUALIFICATION ====================*/
+
+
+/*==================== SERVICES ====================*/
+
+
+/* Active Modal */
+
+
+/*==================== PORTFOLIO ====================*/
+
+
+/*==================== PROJECT IN MIND ====================*/
+
+
+/*==================== TESTIMONIAL ====================*/
+
+
+/*==================== CONTACT ME ====================*/
+
+
+/*==================== FOOTER ====================*/
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--footer-color);
+  font-size: var(--small-font-size);
+}
+
+.footer__container {
+  width: 100%;
+  /* padding-top: 0; */
+  /* padding-right: 0; */
+  float: right;
+}
+
+.footer__nav__L {
+  float: left;
+  width: 10%;
+}
+
+.footer__nav__R {
+  float: right;
+  width: 25%;
+}
+
+
+/*========== SCROLL UP ==========*/
+
+
+/* Show scroll */
+
+
+/*========== SCROLL BAR ==========*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
