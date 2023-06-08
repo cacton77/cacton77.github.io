@@ -248,6 +248,8 @@ ul.nav>li {
   /* padding: 10px 10px; */
   /* width: 11%; */
   text-align: center;
+  padding-bottom: 0px;
+  transition-duration: 0.25s;
 }
 
 ul.nav>li:hover {
@@ -322,8 +324,21 @@ ul.nav>li>a {
 }
 
 .home__button {
-  margin: auto;
+  /* margin: auto; */
+  margin: auto 1;
+  font: var(--body-font);
   font-size: 1rem;
+  background-color: rgba(100, 100, 100, 0.5);
+  color: var(--text-color);
+  /* border: 2px solid #4CAF50; */
+  border: 2px solid var(--text-color);
+  transition-duration: 0.4s;
+}
+
+.home__button:hover {
+  background-color: rgba(100, 100, 100, 0.8);
+  border: 2px solid white;
+  color: white;
 }
 
 .home__text {
