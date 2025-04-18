@@ -429,6 +429,16 @@ ul.nav>li>a {
   width: 25%;
 }
 
+#audio-controls-container {
+  display: none;
+  /* Initially hidden */
+}
+
+#audio-controls-container.active {
+  display: block;
+  /* Show when active */
+}
+
 
 /*========== SCROLL UP ==========*/
 
