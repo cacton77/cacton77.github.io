@@ -17,7 +17,7 @@
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-alt: hsl(var(--hue-color), 27%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --header-color: hsl(var(--hue-color), 18%, 84%);
   --home-color: hsla(99, 03%, 1%, 0.7);
@@ -127,6 +127,9 @@ html {
 }
 
 body {
+  /* transform: scale(1.1); */
+  /* transform-origin: top left; */
+  /* overflow-x: hidden; */
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -146,6 +149,11 @@ h4 {
   /* color: var(--title-color); */
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+}
+
+h1 a:hover {
+  color: var(--first-color);
+  transition: 0.3s;
 }
 
 p {
@@ -208,6 +216,7 @@ img {
 
 .header {
   width: 100%;
+  height: 2.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -226,18 +235,21 @@ img {
 }
 
 .header__img {
-  width: 18px;
+  width: 30px;
   margin: auto;
-  /* padding-top: 4px; */
-  /* padding-top: 4px; */
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
+*/
 /*==================== NAV ====================*/
 
 ul.nav {
   padding-left: 0px;
   background-color: var(--header-color);
   text-align: center;
+  vertical-align: middle;
   /* max-width: 1000px;
   width: 90%;
   margin: 0 auto; */
@@ -248,6 +260,7 @@ ul.nav>li {
   /* padding: 10px 10px; */
   /* width: 11%; */
   text-align: center;
+  vertical-align: middle;
   padding-bottom: 0px;
   transition-duration: 0.25s;
 }
@@ -260,6 +273,7 @@ ul.nav>li:hover {
 ul.nav>li>a {
   color: black;
   text-decoration: none;
+  font-size: 1.125rem;
 }
 
 
@@ -346,6 +360,11 @@ ul.nav>li>a {
   /* padding-top: 1rem; */
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.home__text strong {
+  color: var(--first-color-alt);
+  font-weight: var(--font-semi-bold);
 }
 
 .home__img {

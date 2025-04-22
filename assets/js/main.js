@@ -100,11 +100,14 @@ themeButton.addEventListener('click', () => {
 //     });
 // });
 
+/*==================== RADIO PLAYER ====================*/
+// This code creates a radio player that plays a stream when the user clicks on a link with the ID "radio-link".
+// The player is created dynamically and includes controls for play/pause. The icon of the link changes based on the state of the player.
+// The player is removed when the stream is stopped.
 document.addEventListener('DOMContentLoaded', function () {
     const radioLink = document.getElementById('radio-link');
     const radioIcon = radioLink.querySelector('i.uil'); // Select the icon inside the link
     let audioElement = null;
-    let audioControlsContainer = null;
 
     radioLink.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent default link behavior
@@ -115,27 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
             audioElement.src = 'http://73.169.200.205:8443/';
             audioElement.type = 'audio/mpeg';
             audioElement.autoplay = true;
-            audioElement.controls = true; // Add controls to the audio element
-            audioElement.style.width = '100%';
-
-            // Create a container for the audio controls
-            audioControlsContainer = document.createElement('div');
-            audioControlsContainer.id = 'audio-controls-container';
-            audioControlsContainer.style.position = 'fixed';
-            audioControlsContainer.style.bottom = '20px';
-            audioControlsContainer.style.left = '50%';
-            audioControlsContainer.style.transform = 'translateX(-50%)';
-            audioControlsContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-            audioControlsContainer.style.padding = '10px';
-            audioControlsContainer.style.borderRadius = '10px';
-            audioControlsContainer.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-            audioControlsContainer.style.zIndex = '1000';
-
-            // Append the audio element to the container
-            audioControlsContainer.appendChild(audioElement);
-
-            // Append the container to the body
-            document.body.appendChild(audioControlsContainer);
+            audioElement.id = 'radio-audio';
+            document.body.appendChild(audioElement);
 
             // Change the icon to "pause"
             radioIcon.classList.remove('uil-play');
@@ -146,12 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
             audioElement.remove();
             audioElement = null;
 
-            // Remove the audio controls container
-            if (audioControlsContainer) {
-                audioControlsContainer.remove();
-                audioControlsContainer = null;
-            }
-
             // Change the icon back to "play"
             radioIcon.classList.remove('uil-pause');
             radioIcon.classList.add('uil-play');
@@ -160,3 +138,92 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
+// This code updates the text content of an element with the class "footer__nav__R i" to show the scroll percentage as the user scrolls down the page.
+// It calculates the scroll percentage based on the current scroll position and the total scrollable height of the document.
+// The percentage is displayed in the format "X%", where X is the calculated scroll percentage.
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollIndicator = document.querySelector('.footer__nav__R i'); // Select the element with "100%"
+
+    window.addEventListener('scroll', function () {
+        // Calculate the scroll percentage
+        const scrollTop = window.scrollY; // Current vertical scroll position
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight; // Total scrollable height
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+        // Update the text content with the scroll percentage
+        scrollIndicator.textContent = `${scrollPercent}%`;
+    });
+});
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+
+// Mode switcher functionality
+// This code listens for a click event on an element with the ID "mode-switch" and fetches the contents of "radio.html" when clicked.
+// document.addEventListener('DOMContentLoaded', function () {
+//     const modeSwitch = document.getElementById('mode-switch');
+//     const mainElement = document.querySelector('main');
+
+//     modeSwitch.addEventListener('click', function (event) {
+//         event.preventDefault(); // Prevent default link behavior
+
+//         // Fetch the contents of radio.html
+//         fetch('radio.html')
+//             .then(response => {
+//                 if (!response.ok) {
+//                     throw new Error('Failed to load radio.html');
+//                 }
+//                 return response.text();
+//             })
+//             .then(data => {
+//                 // Replace the contents of the <main> element
+//                 mainElement.innerHTML = data;
+//             })
+//             .catch(error => {
+//                 console.error('Error loading radio.html:', error);
+//             });
+//     });
+// });
+
+// This code listens for the DOMContentLoaded event and checks if the current URL contains "radio".
+// If it does, it loads the contents of "radio.html" into the <main> element. It also sets up a click event listener on the mode switch link to toggle between the main page and radio mode.
+document.addEventListener('DOMContentLoaded', function () {
+    const modeSwitch = document.getElementById('mode-switch');
+    const mainElement = document.querySelector('main');
+
+    // Function to load content dynamically
+    function loadContent(url) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load content');
+                }
+                return response.text();
+            })
+            .then(data => {
+                mainElement.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading content:', error);
+            });
+    }
+
+    // Check the URL on page load
+    if (window.location.pathname.includes('radio')) {
+        loadContent('radio.html');
+    }
+
+    // Event listener for mode-switch
+    modeSwitch.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        if (window.location.pathname.includes('radio')) {
+            // Switch back to the main page
+            history.pushState({}, '', '/');
+            location.reload(); // Reload to reset to the main content
+        } else {
+            // Switch to radio mode
+            history.pushState({}, '', '/radio');
+            loadContent('radio.html');
+        }
+    });
+});
